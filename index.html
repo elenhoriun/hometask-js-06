@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lesson 06 - Homework</title>
+	<link rel="stylesheet" href="style.css">
+	
+</head>
+<body>
+
+	<div class="container">
+
+		<h3>Information box</h3>
+		<p>To edit press "Ctrl+E" and type the text in the box. <br>Save changes by pressing "Ctrl+S".</p>		
+		<textarea id="text_box" class="box"></textarea> 
+		<div id="main_box" class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, fugit.</div>
+		
+		
+	<script>
+
+
+		;(function(){
+			"use strict";
+
+
+		document.onkeydown = function(ev) {
+
+			if (ev.ctrlKey && ev.keyCode == 69) {
+				edit();
+				ev.preventDefault();
+			}
+
+			if (ev.keyCode == 27) {
+				escape();
+			}
+
+			if (ev.ctrlKey && ev.keyCode == 83) {
+				save();
+				ev.preventDefault();
+			} 
+
+		}
+
+		function edit() {
+			main_box.style.display = 'none';
+			text_box.value = main_box.innerHTML;
+			text_box.style.display = 'block';
+			text_box.style.border
+			text_box.focus();
+		}
+
+		function escape() {
+			text_box.blur();
+			text_box.style.display = 'none';
+			main_box.style.display = 'block';
+		}
+
+		function save() {
+			text_box.style.display = 'none';
+			main_box.innerHTML = text_box.value;
+			main_box.style.display = 'block';
+		}
+
+
+	})();
+
+			
+
+	</script>
+
+</body>
+</html>

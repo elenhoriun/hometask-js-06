@@ -1,0 +1,32 @@
+* {
+	box-sizing: border-box;
+}
+
+h3 {
+	font-size: 30px;
+	color: red;
+	text-align: center;
+}
+
+p {
+	text-align: center;
+	color: grey;
+}
+
+.box {
+	display: block;
+	width: 400px;
+	height: 300px;
+	border: 4px solid grey;
+	padding: 15px;
+	text-align: justify;
+	margin: 0 auto;
+	font-size: 20px;
+	font-style: italic;
+}
+
+
+#text_box {
+	display: none;
+	outline: none;
+}
